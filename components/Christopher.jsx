@@ -1,6 +1,11 @@
 export default function Christopher() {
   return (
-    <svg viewBox="0 0 619.301 99.4" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      height="auto"
+      width="100%"
+      viewBox="0 0 619.301 99.4"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g
         id="christopher"
         strokeLinecap="round"
