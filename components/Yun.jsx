@@ -1,7 +1,7 @@
 export default function Yun() {
   return (
     <svg
-      height="auto"
+      height="100%"
       width="100%"
       viewBox="0 0 225.439 73.828"
       xmlns="http://www.w3.org/2000/svg"
