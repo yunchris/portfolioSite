@@ -43,7 +43,7 @@ export default function SideBar(active) {
             quality={100}
           />
         </div>
-        <div>
+        <div style={{paddingTop :"2rem"}}>
           <Christopher />
         </div>
         <div>
