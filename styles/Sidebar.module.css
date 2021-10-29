@@ -22,9 +22,20 @@
   align-items: center;
 }
 
+.link:hover {
+  color: white;
+  cursor: pointer;
+}
+
 .footer {
   width: 40%;
   justify-content: space-between;
   font-size: 2rem;
   margin: auto;
+  transition: ease-in-out;
+}
+
+.footer svg:hover {
+  fill: white;
+  transform: scale(1.2);
 }

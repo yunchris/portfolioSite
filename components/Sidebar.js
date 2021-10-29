@@ -2,8 +2,7 @@ import Image from "next/image"
 import styles from "../styles/Sidebar.module.css";
 import Christopher from "../components/svg/Christopher";
 import Yun from "../components/svg/Yun";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import { FaGithub, FaLinkedin, FaFacebookSquare } from "react-icons/fa";
 
 export default function SideBar() {
   return (
@@ -18,14 +17,20 @@ export default function SideBar() {
         <Yun />
       </div>
       <div className={styles.navigation}>
-        <div>ABOUT</div>
-        <div>PORTFOLIO</div>
-        <div>CONTACT</div>
+        <div className={styles.link}>ABOUT</div>
+        <div className={styles.link}>PORTFOLIO</div>
+        <div className={styles.link}>CONTACT</div>
       </div>
       <div className={styles.footer}>
-        <FaGithub />
-        <FaLinkedin />
-        <HiOutlineMail />
+        <a href="https://github.com/yunchris" target="_blank">
+          <FaGithub />
+        </a>
+        <a href="https://www.linkedin.com/in/christopher-yun/" target="_blank">
+          <FaLinkedin />
+        </a>
+        <a href="https://www.facebook.com/christopher.yun.77" target="_blank">
+          <FaFacebookSquare />
+        </a>
       </div>
     </div>
   );
