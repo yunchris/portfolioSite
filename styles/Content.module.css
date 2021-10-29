@@ -1,0 +1,8 @@
+.contentContainer {
+  background-color: #212d40;
+  /* background-color: #364156; */
+  /* background-color: #006ba6; */
+  width: 100vw;
+  height: 100vh;
+  flex-basis: 70%;
+}

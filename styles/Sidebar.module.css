@@ -1,8 +1,7 @@
 .sidebar {
-  position: fixed;
-  width: 30%;
+  flex-basis: 30%;
   height: 100%;
-  padding: 20px;
+  padding: 50px;
   background-color: #ffbc42;;
   top: 0;
   z-index: 100;

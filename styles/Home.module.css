@@ -1,14 +1,8 @@
 .container {
   min-height: 100vh;
-  flex-direction: column;
+  min-width: 100vw;
+  flex-direction: row;
 }
-
-/* .home {
-  height: 100vh;
-  width: 100vw;
-  flex-direction: column;
-  background-color: #0496ff;
-} */
 
 .menu {
   flex-direction: column;
@@ -88,10 +82,4 @@
   } to {
     width: 100%;
   }
-}
-
-#yun {
-  stroke: #000;
-  stroke-width: 0.25mm;
-  fill: #fff;
 }
