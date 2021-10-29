@@ -1,7 +1,6 @@
 import Head from 'next/head'
+import Sidebar from '../components/Sidebar'
 import styles from '../styles/Home.module.css'
-import Christopher from '../components/Christopher'
-import Yun from '../components/Yun'
 
 export default function Home() {
   return (
@@ -19,29 +18,8 @@ export default function Home() {
         />
       </Head>
 
-      <main className={styles.home}>
-        <div className={styles.first}>
-          <Christopher />
-        </div>
-        <div className={styles.second}>
-          <div className={styles.menu}>
-            <div className={styles.about}>
-              <div className={styles.menuTextAbout}>about</div>
-              <div className={styles.aboutColor} />
-            </div>
-            <div className={styles.contact}>
-              <div className={styles.menuTextContact}>contact</div>
-              <div className={styles.contactColor} />
-            </div>
-            <div className={styles.work}>
-              <div className={styles.menuTextWork}>portfolio</div>
-              <div className={styles.workColor} />
-            </div>
-          </div>
-          <div className={styles.yun}>
-            <Yun />
-          </div>
-        </div>
+      <main>
+        <Sidebar />
       </main>
     </div>
   );

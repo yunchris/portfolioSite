@@ -1,0 +1,30 @@
+.sidebar {
+  position: fixed;
+  width: 30%;
+  height: 100%;
+  padding: 20px;
+  background-color: #ffbc42;;
+  top: 0;
+  z-index: 100;
+  flex-direction: column;
+}
+
+.logo {
+  position: relative;
+  height: 40%;
+}
+
+.navigation {
+  flex-direction: column;
+  font-size: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  align-items: center;
+}
+
+.footer {
+  width: 40%;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin: auto;
+}
