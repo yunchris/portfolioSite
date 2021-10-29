@@ -43,7 +43,7 @@ export default function SideBar(active) {
             quality={100}
           />
         </div>
-        <div style={{paddingTop :"2rem"}}>
+        <div style={{ paddingTop: "2rem" }}>
           <Christopher />
         </div>
         <div>
@@ -62,13 +62,21 @@ export default function SideBar(active) {
         </div>
       </div>
       <div className={styles.footer}>
-        <a href="https://github.com/yunchris" target="_blank">
+        <a href="https://github.com/yunchris" target="_blank" rel="noreferrer">
           <FaGithub />
         </a>
-        <a href="https://www.linkedin.com/in/christopher-yun/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/christopher-yun/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaLinkedin />
         </a>
-        <a href="https://www.facebook.com/christopher.yun.77" target="_blank">
+        <a
+          href="https://www.facebook.com/christopher.yun.77"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaFacebookSquare />
         </a>
       </div>
