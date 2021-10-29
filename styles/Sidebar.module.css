@@ -1,16 +1,20 @@
 .sidebar {
   flex-basis: 30%;
   height: 100%;
-  padding: 50px;
-  background-color: #ffbc42;;
+  background-color: #ffbc42;
   top: 0;
   z-index: 100;
   flex-direction: column;
 }
 
+.topSection {
+  padding: 50px 50px 0px 50px;
+  flex-direction: column;
+}
+
 .logo {
   position: relative;
-  height: 40%;
+  height: 25vh;
 }
 
 .navigation {
@@ -21,9 +25,28 @@
   align-items: center;
 }
 
-.link:hover {
-  color: white;
+
+.about, .portfolio, .contact {
+  width: 100%;
+  justify-content: center;
+  transition: ease-in-out .3s;
+}
+
+.about:hover, .portfolio:hover, .contact:hover {
+  color: white !important;
   cursor: pointer;
+}
+
+.about:hover {
+  background-color: #212d40 !important;
+}
+
+.portfolio:hover{
+  background-color: #d81159 !important;
+}
+
+.contact:hover {
+  background-color: #0496ff !important;
 }
 
 .footer {

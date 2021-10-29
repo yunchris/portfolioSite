@@ -1,8 +1,15 @@
 .contentContainer {
-  background-color: #212d40;
-  /* background-color: #364156; */
-  /* background-color: #006ba6; */
   width: 100vw;
   height: 100vh;
   flex-basis: 70%;
+}
+
+.animate {
+  animation: slide-in 1.2s forwards;
+  -webkit-animation: slide-in 1.2s forwards;
+}
+
+@keyframes slide-in {
+  0% { -webkit-transform: translateX(-100%); }
+  100% { -webkit-transform: translateX(0%); }
 }

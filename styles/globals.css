@@ -18,3 +18,10 @@ div {
 * {
   box-sizing: border-box;
 }
+
+#container {
+  min-height: 100vh;
+  min-width: 100vw;
+  flex-direction: row;
+  background-color: #ffbc42;
+}
