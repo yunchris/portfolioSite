@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import Image from "next/image"
 import styles from "../styles/Sidebar.module.css";
-import Christopher from "./svg/Christopher";
+import Chris from "./svg/Chris";
+import Topher from "./svg/Topher";
 import Yun from "./svg/Yun";
 import { FaGithub, FaLinkedin, FaFacebookSquare } from "react-icons/fa";
 
@@ -34,17 +35,9 @@ export default function SideBar(active) {
 
   return (
     <div className={styles.sidebar}>
-      <div className={styles.topSection}>
-        <div className={styles.logo}>
-          <Image
-            src="/monkey.svg"
-            layout="fill"
-            objectFit="fill"
-            quality={100}
-          />
-        </div>
+      <div className={styles.names}>
         <div style={{ paddingTop: "2rem" }}>
-          <Christopher />
+          <Chris />
         </div>
         <div>
           <Yun />

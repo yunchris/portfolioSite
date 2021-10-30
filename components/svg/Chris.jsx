@@ -1,8 +1,8 @@
-export default function Christopher() {
+export default function Chris() {
   return (
     <svg height="100%" width="100%" viewBox="0 0 270 80">
       <g
-        id="christopher"
+        id="chris"
         strokeLinecap="round"
         fillRule="evenodd"
         stroke="#212d40"

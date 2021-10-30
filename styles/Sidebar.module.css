@@ -1,29 +1,41 @@
 .sidebar {
-  flex-basis: 30%;
+  flex-basis: 100%;
   height: 100%;
+  padding: 3rem 0rem 3rem 0rem;
   background-color: #ffbc42;
-  top: 0;
   z-index: 100;
   flex-direction: column;
+  align-items: center;
 }
 
-.topSection {
-  padding: 50px 50px 0px 50px;
+@media only screen and (min-width: 800px) {
+  .sidebar {
+    flex-basis: 20%;
+  }
+}
+
+.names {
+  flex-basis: 40%;
+  width: 100%;
+  max-width: 30rem;
+  padding: 0rem 2rem 0rem 2rem;
   flex-direction: column;
+  justify-content: center;
 }
 
-.logo {
+/* .logo {
   position: relative;
   height: 20vh;
   padding-bottom: 3rem;
-}
+} */
 
 .navigation {
+  flex-basis: 40%;
+  width: 100%;
   flex-direction: column;
   font-size: 3rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   align-items: center;
+  justify-content: center;
 }
 
 
@@ -31,6 +43,7 @@
   width: 100%;
   justify-content: center;
   transition: ease-in-out .3s;
+  padding: 0rem 2rem 0rem 2rem;
 }
 
 .about:hover, .portfolio:hover, .contact:hover {
@@ -51,11 +64,12 @@
 }
 
 .footer {
+  flex-basis: 20%;
   width: 40%;
   justify-content: space-between;
   font-size: 2rem;
-  margin: auto;
   transition: ease-in-out;
+  align-items: flex-end;
 }
 
 .footer svg:hover {

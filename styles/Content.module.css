@@ -1,7 +1,13 @@
 .contentContainer {
   width: 100vw;
   height: 100vh;
-  flex-basis: 70%;
+  flex-basis: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+  .contentContainer {
+    flex-basis: 80%;
+  }
 }
 
 .animate {

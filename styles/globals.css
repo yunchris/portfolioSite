@@ -22,6 +22,12 @@ div {
 #container {
   min-height: 100vh;
   min-width: 100vw;
-  flex-direction: row;
+  flex-direction: column;
   background-color: #ffbc42;
+}
+
+@media only screen and (min-width: 800px) {
+  #container {
+    flex-direction: row;
+  }
 }
