@@ -15,23 +15,34 @@ const colors = {
 export default function SideBar(active) {
   let currentColor = colors[active.active];
 
+  function setWindowHeight() {
+    const container = document.getElementById("container")
+    let windowHeight = window.innerHeight;
+    container.style.height = windowHeight + "px";
+  }
+  
+  useEffect(() => {
+    setWindowHeight();
+    window.addEventListener("resize", setWindowHeight, false);
+  }, []);
+
   useEffect(() => {
     currentColor = colors[active.active];
-    let nav = document.getElementById('nav').children;
+    const nav = document.getElementById('nav').children;
 
     for (let i = 0; i < nav.length; i++) {
       nav[i].style.color = "black"
       nav[i].style.backgroundColor = "transparent"
     }
 
-    let currentElement = document.getElementById(`${active.active}`);
+    const currentElement = document.getElementById(`${active.active}`);
     currentElement.style.color = "white";
     currentElement.style.backgroundColor = currentColor;
 
-    let logo = document.getElementById("logo");
+    const logo = document.getElementById("logo");
     logo.style.fill = currentColor;
 
-    let name = document.getElementById("yun");
+    const name = document.getElementById("yun");
     name.style.fill = currentColor;
   }, [active])
 
@@ -68,21 +79,21 @@ export default function SideBar(active) {
       </div>
       <div className={styles.footer}>
         <a href="https://github.com/yunchris" target="_blank" rel="noreferrer">
-          <FaGithub color="#212d40" />
+          <FaGithub color={currentColor} />
         </a>
         <a
           href="https://www.linkedin.com/in/christopher-yun/"
           target="_blank"
           rel="noreferrer"
         >
-          <FaLinkedin color="#212d40" />
+          <FaLinkedin color={currentColor} />
         </a>
         <a
           href="https://www.facebook.com/christopher.yun.77"
           target="_blank"
           rel="noreferrer"
         >
-          <FaFacebookSquare color="#212d40" />
+          <FaFacebookSquare color={currentColor} />
         </a>
       </div>
     </div>
