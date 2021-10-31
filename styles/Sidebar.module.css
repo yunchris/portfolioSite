@@ -20,7 +20,7 @@
 
 .logo {
   height: 100px;
-  /* display: none; */
+  display: none;
   -webkit-animation: rotating 3s linear infinite;
   -moz-animation: rotating 3s linear infinite;
   -ms-animation: rotating 3s linear infinite;
@@ -60,6 +60,7 @@
 .navigation {
   height: 40%;
   width: 100%;
+  padding: 2rem 0rem;
   flex-direction: column;
   font-size: 2rem;
   align-items: center;
@@ -126,7 +127,8 @@
   .footer {
     height: 30%
   }
-  /* .logo {
+
+  .logo {
     display: flex;
-  } */
+  }
 }
