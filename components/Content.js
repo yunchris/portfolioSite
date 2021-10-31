@@ -4,7 +4,7 @@ import styles from "../styles/Content.module.css";
 const colors = {
   about: "#212d40",
   portfolio: "#d81159",
-  contact: "#0496ff",
+  contact: "#0081a7",
 };
 
 export default function Content(active) {
