@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import Image from "next/image"
 import styles from "../styles/Sidebar.module.css";
 import Christopher from "./svg/Christopher";
 import Yun from "./svg/Yun";
@@ -39,8 +38,13 @@ export default function SideBar(active) {
     currentElement.style.color = "white";
     currentElement.style.backgroundColor = currentColor;
 
-    const logo = document.getElementById("logo");
-    logo.style.fill = currentColor;
+    const innermoon = document.getElementById("innermoon");
+    innermoon.style.fill = currentColor;
+
+    const outermoon = document.getElementById("outermoon")
+    currentColor === "#212d40"
+      ? (outermoon.style.fill = "white")
+      : (outermoon.style.fill = "#212d40");
 
     const name = document.getElementById("yun");
     name.style.fill = currentColor;
@@ -57,7 +61,7 @@ export default function SideBar(active) {
     <div className={styles.sidebar}>
       <div className={styles.top}>
         <div className={styles.logo}>
-          <Logo currentColor={currentColor} />
+          <Logo />
         </div>
         <div>
           <Christopher />
