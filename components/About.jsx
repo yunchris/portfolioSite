@@ -30,7 +30,7 @@ export default function About() {
       <div className={styles.twoColumn}>
         <div className={styles.greeting}>
           <div className={styles.greetHeader}>
-            Hi. I'm Chris. Welcome to my site.
+            Hi. I&apos;m Chris. Welcome to my site.
           </div>
           <div className={styles.profile}>
             <Image
@@ -38,11 +38,10 @@ export default function About() {
               width="150px"
               height="150px"
               objectFit="contain"
+              alt="profile"
             />
           </div>
-          <div className={styles.greetHeader}>
-            I am...
-          </div>
+          <div className={styles.greetHeader}>I am...</div>
         </div>
         <a href="/Christopher_Yun_Resume.pdf" download target="_blank">
           <div className={styles.resume}>

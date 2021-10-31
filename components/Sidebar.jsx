@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import styles from "../styles/Sidebar.module.css";
 import Christopher from "./svg/Christopher";
 import Yun from "./svg/Yun";
@@ -12,7 +12,7 @@ const colors = {
 };
 
 export default function SideBar(active) {
-  let currentColor = colors[active.active];
+  const currentColor = useRef(colors[active.active])
 
   function setWindowHeight() {
     const container = document.getElementById("container")
@@ -26,7 +26,7 @@ export default function SideBar(active) {
   }, []);
 
   useEffect(() => {
-    currentColor = colors[active.active];
+    currentColor.current = colors[active.active];
     const nav = document.getElementById('nav').children;
 
     for (let i = 0; i < nav.length; i++) {
@@ -36,18 +36,21 @@ export default function SideBar(active) {
 
     const currentElement = document.getElementById(`${active.active}`);
     currentElement.style.color = "white";
-    currentElement.style.backgroundColor = currentColor;
+    currentElement.style.backgroundColor = currentColor.current;
 
     const innermoon = document.getElementById("innermoon");
-    innermoon.style.fill = currentColor;
+    innermoon.style.fill = currentColor.current;
 
     const outermoon = document.getElementById("outermoon")
-    currentColor === "#212d40"
+    currentColor.current === "#212d40"
       ? (outermoon.style.fill = "white")
       : (outermoon.style.fill = "#212d40");
 
     const name = document.getElementById("yun");
-    name.style.fill = currentColor;
+    name.style.fill = currentColor.current;
+
+    const footer = document.getElementById("footer");
+    footer.style.color = currentColor.current
   }, [active])
 
   const handleClick = (e) => {
@@ -58,7 +61,7 @@ export default function SideBar(active) {
     activeContent.classList.remove("animate");
 
     let container = document.getElementById("container");
-    container.style.backgroundColor = currentColor;
+    container.style.backgroundColor = currentColor.current;
   }
 
   return (
@@ -85,23 +88,23 @@ export default function SideBar(active) {
           CONTACT
         </div>
       </div>
-      <div className={styles.footer}>
+      <div id="footer" className={styles.footer}>
         <a href="https://github.com/yunchris" target="_blank" rel="noreferrer">
-          <FaGithub color={currentColor} />
+          <FaGithub />
         </a>
         <a
           href="https://www.linkedin.com/in/christopher-yun/"
           target="_blank"
           rel="noreferrer"
         >
-          <FaLinkedin color={currentColor} />
+          <FaLinkedin />
         </a>
         <a
           href="https://www.facebook.com/christopher.yun.77"
           target="_blank"
           rel="noreferrer"
         >
-          <FaFacebookSquare color={currentColor} />
+          <FaFacebookSquare />
         </a>
       </div>
     </div>
