@@ -20,7 +20,8 @@
 
 .logo {
   height: 100px;
-  display: contents;
+  max-height: 100px;
+  display: block;
   -webkit-animation: rotating 3s linear infinite;
   -moz-animation: rotating 3s linear infinite;
   -ms-animation: rotating 3s linear infinite;
