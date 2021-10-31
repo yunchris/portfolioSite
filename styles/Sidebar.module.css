@@ -21,6 +21,7 @@
 
 .logo {
   height: 100px;
+  display: none;
   /* transform: translateX(-22px); */
   -webkit-animation: rotating 3s linear infinite;
   -moz-animation: rotating 3s linear infinite;
@@ -76,6 +77,10 @@
 
   .navigation {
     font-size: 3rem;
+  }
+
+  .logo {
+    display: flex;
   }
 }
 
