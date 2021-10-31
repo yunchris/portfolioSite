@@ -53,6 +53,10 @@ export default function SideBar(active) {
   const handleClick = (e) => {
     active.setActive(e.target.id)
     
+    let activeContent = document.getElementById("contentContainer");
+    activeContent.style.opacity = 0;
+    activeContent.classList.remove("animate");
+
     let container = document.getElementById("container");
     container.style.backgroundColor = currentColor;
   }

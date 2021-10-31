@@ -64,9 +64,11 @@
   width: 100%;
   padding: 2rem 0rem;
   flex-direction: column;
-  font-size: 2rem;
   align-items: center;
   justify-content: center;
+  font-size: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .about, .portfolio, .contact {

@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: white;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
 }
 
 a {
@@ -36,7 +38,7 @@ div {
   width: 100%;
   height: 100%;
   flex-basis: 100%;
-  padding: 2rem;    
+  padding: 2rem;
 }
 
 @media only screen and (min-width: 800px) {

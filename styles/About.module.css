@@ -1,32 +1,74 @@
 .aboutContainer {
   overflow: scroll;
-  flex-direction: column;
-}
-
-.greeting {
-  /* background-color: red; */
-  height: 100%;
-  flex-basis: 50%;
-}
-
-.twoColumn {
-  flex-basis: 50%;
-}
-
-.resume {
-  flex-basis: 40%;
+  flex-direction: row;
+  width: 100%;
 }
 
 .icons {
-  flex-basis: 60%;
+  min-width: 150px;
+  max-width: 150px;
 }
+
+
+.twoColumn {
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.greeting {
+  flex-direction: column;
+  text-align: center;
+  align-self: center;
+}
+
+.greetHeader {
+  width: 100%;
+  font-size: 2rem;
+  padding: .5rem;
+  justify-content: center;
+}
+
+.profile {
+  padding: 1rem;
+  position: relative;
+  margin: auto;
+}
+
+.profile img {
+  border-radius: 50%;
+}
+
+.resume {
+  width: 180px;
+  height: auto;
+  margin: auto;
+  padding: .75rem;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  transition: ease-in .2s;
+}
+
+.resume svg {
+  margin-right: 10px;
+}
+
+.resume:hover {
+  color: black;
+  background-color: white;
+  transform: scale(1.05);
+}
+
 .icons {
   font-size: 2.5rem;
   color: #999999;
   width: 100%;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  align-content: flex-end;
+  align-content: space-between;
 }
 
 .icons i {

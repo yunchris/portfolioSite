@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import About from "./About"
+import Portfolio from "./Portfolio"
+import Contact from "./Contact"
 
 const colors = {
   about: "#212d40",
@@ -9,26 +11,25 @@ const colors = {
 
 export default function Content(active) {
   useEffect(() => {
-    if (document) {
-      let activeContent = document.getElementById("contentContainer");
-      activeContent.style.opacity = 0;
-      activeContent.classList.remove("animate")
-      setTimeout(() => {
-        activeContent.style.backgroundColor = colors[active.active];
-        activeContent.classList.add("animate")
-      }, 100);
-      setTimeout(() => {
-        activeContent.style.opacity = 1;
-      }, 200);
-    }
+    let activeContent = document.getElementById("contentContainer");
+    
+    setTimeout(() => {
+      activeContent.style.backgroundColor = colors[active.active];
+      activeContent.classList.add("animate")
+      activeContent.style.opacity = 1;
+    }, 100);
   }, [active])
 
   function currentContent() {
     switch (active.active) {
       case "about":
         return <About />
+      case "portfolio":
+        return <Portfolio />
+      case "contact":
+        return <Contact />
       default:
-        break;
+        return;
     }
   }
 
