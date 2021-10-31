@@ -21,7 +21,7 @@
 .logo {
   height: 100px;
   max-height: 100px;
-  display: block;
+  display: flex;
   -webkit-animation: rotating 3s linear infinite;
   -moz-animation: rotating 3s linear infinite;
   -ms-animation: rotating 3s linear infinite;
