@@ -44,7 +44,7 @@ export default function SideBar(active) {
 
   return (
     <div className={styles.sidebar}>
-      <div className={styles.names}>
+      <div className={styles.top}>
         <div className={styles.logo}>
           <Logo currentColor={currentColor} />
         </div>
