@@ -20,8 +20,8 @@ div {
 }
 
 #container {
-  min-height: 100vh;
-  min-width: 100vw;
+  min-height: 100%;
+  min-width: 100%;
   flex-direction: column;
   background-color: #ffbc42;
 }
