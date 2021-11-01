@@ -11,6 +11,7 @@ body {
   margin: 0;
   color: white;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -26,6 +27,11 @@ div {
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 #container {
   min-height: 100%;
   min-width: 100%;
@@ -37,6 +43,11 @@ div {
   #container {
     flex-direction: row;
   }
+
+  .animate {
+    animation: slide-in 1.2s forwards;
+    -webkit-animation: slide-in 1.2s forwards;
+  }
 }
 
 .contentContainer {
@@ -45,17 +56,16 @@ div {
   flex-basis: 100%;
   padding: 2rem;
   background-color: var(--color-active);
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
-@media only screen and (min-width: 800px) {
-  .contentContainer {
-    flex-basis: 80%;
-  }
+.contentContainer::-webkit-scrollbar {
+  display: none;
 }
 
 .animate {
-  animation: slide-in 1.2s forwards;
-  -webkit-animation: slide-in 1.2s forwards;
+  display: flex;
 }
 
 @keyframes slide-in {

@@ -34,9 +34,11 @@ export default function SideBar(active) {
     // Sets new active component state
     active.setActive(e.target.id)
     
+    let activeContent = document.getElementById("contentContainer");
+    activeContent.style.display = "flex";
+
     // Hides content so it doesnt show before new component slide in animation
     if (active.active !== e.target.id) {
-      let activeContent = document.getElementById("contentContainer");
       activeContent.style.opacity = 0;
       activeContent.classList.remove("animate");
   
@@ -72,30 +74,30 @@ export default function SideBar(active) {
         </div>
       </div>
       <div id="nav" className={styles.navigation}>
-        <div
+        <a href="#aboutChris"
           id="about"
           style={calculateStyles("about")}
           className={styles.about}
           onClick={handleClick}
         >
           ABOUT
-        </div>
-        <div
+        </a> 
+        <a href="#contentContainer"
           id="portfolio"
           style={calculateStyles("portfolio")}
           className={styles.portfolio}
           onClick={handleClick}
         >
           PORTFOLIO
-        </div>
-        <div
+        </a>
+        <a href="#contentContainer"
           id="contact"
           style={calculateStyles("contact")}
           className={styles.contact}
           onClick={handleClick}
         >
           CONTACT
-        </div>
+        </a>
       </div>
       <div className={styles.footer}>
         <a href="https://github.com/yunchris" target="_blank" rel="noreferrer">

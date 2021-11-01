@@ -1,7 +1,6 @@
 .sidebar {
   flex-basis: 100%;
   min-height: 100%;
-  width: 100%;
   padding: 2rem 0rem 2rem 0rem;
   background-color: var(--color-sidebar);
   z-index: 100;
@@ -73,7 +72,8 @@
 
 .about, .portfolio, .contact {
   width: 100%;
-  justify-content: center;
+  /* justify-content: center; */
+  text-align: center;
   transition: ease-in-out .3s;
   padding: 0rem 2rem 0rem 2rem;
 }
@@ -97,7 +97,7 @@
 
 .footer {
   height: 20%;
-  width: 40%;
+  width: 140px;
   justify-content: space-between;
   font-size: 2rem;
   align-items: flex-end;
@@ -111,18 +111,33 @@
 
 @media only screen and (min-width: 800px) {
   .sidebar {
+    flex-basis: 10%;
+    min-width: 250px;
+    padding-top: 3rem;
+  }
+
+  .navigation {
+    font-size: 2.25rem;
+  }
+
+  .logo {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1350px) {
+  .sidebar {
     flex-basis: 20%;
-    width: 20%;
     min-width: 350px;
     padding-top: 3rem;
   }
 
   .navigation {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .logo {
-    display: flex;
     margin-bottom: 1rem;
   }
 }

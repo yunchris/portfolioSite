@@ -28,7 +28,7 @@ export default function About() {
         <i className="devicon-wordpress-plain" />
       </div>
       <div className={styles.twoColumn}>
-        <div className={styles.greeting}>
+        <div id="aboutChris" className={styles.greeting}>
           <div className={styles.greetHeader}>
             Hi. I&apos;m Chris. Welcome to my site.
           </div>
