@@ -19,7 +19,7 @@ export default function SideBar(active) {
     let windowHeight = window.innerHeight;
     container.style.height = windowHeight + "px";
   }
-  
+
   useEffect(() => {
     setWindowHeight();
     window.addEventListener("resize", setWindowHeight, false);
@@ -27,68 +27,77 @@ export default function SideBar(active) {
 
   useEffect(() => {
     currentColor.current = colors[active.active];
-    const nav = document.getElementById('nav').children;
-
-    for (let i = 0; i < nav.length; i++) {
-      nav[i].style.color = "black"
-      nav[i].style.backgroundColor = "transparent"
-    }
-
-    const currentElement = document.getElementById(`${active.active}`);
-    currentElement.style.color = "white";
-    currentElement.style.backgroundColor = currentColor.current;
-
-    const innermoon = document.getElementById("innermoon");
-    innermoon.style.fill = currentColor.current;
-
-    const outermoon = document.getElementById("outermoon")
-    currentColor.current === "#212d40"
-      ? (outermoon.style.fill = "white")
-      : (outermoon.style.fill = "#212d40");
-
-    const name = document.getElementById("yun");
-    name.style.fill = currentColor.current;
-
-    const footer = document.getElementById("footer");
-    footer.style.color = currentColor.current
   }, [active])
-
+  
+  
   const handleClick = (e) => {
+    // Sets new active component state
     active.setActive(e.target.id)
     
-    let activeContent = document.getElementById("contentContainer");
-    activeContent.style.opacity = 0;
-    activeContent.classList.remove("animate");
+    // Hides content so it doesnt show before new component slide in animation
+    if (active.active !== e.target.id) {
+      let activeContent = document.getElementById("contentContainer");
+      activeContent.style.opacity = 0;
+      activeContent.classList.remove("animate");
+  
+      // Modifies container bg for slide in animation effect
+      let container = document.getElementById("container");
+      container.style.backgroundColor = currentColor.current;
+    }
+  }
 
-    let container = document.getElementById("container");
-    container.style.backgroundColor = currentColor.current;
+  const calculateStyles = (componentName) => {
+    return (
+      active.active === componentName 
+      ? {color: "white", backgroundColor: "var(--color-active)"}
+      : {color: "black", backgroundColor: "transparent"}
+    )
+  }
+
+  const calculateMoonColor = () => {
+    return active.active === "about" ? "#ffffff" : "#212d40";
   }
 
   return (
     <div className={styles.sidebar}>
       <div className={styles.top}>
         <div className={styles.logo}>
-          <Logo />
+          <Logo outermoonColor={calculateMoonColor()}/>
         </div>
         <div>
           <Christopher />
         </div>
-        <div>
+        <div style={{ fill: "var(--color-active)" }}>
           <Yun />
         </div>
       </div>
       <div id="nav" className={styles.navigation}>
-        <div id="about" className={styles.about} onClick={handleClick}>
+        <div
+          id="about"
+          style={calculateStyles("about")}
+          className={styles.about}
+          onClick={handleClick}
+        >
           ABOUT
         </div>
-        <div id="portfolio" className={styles.portfolio} onClick={handleClick}>
+        <div
+          id="portfolio"
+          style={calculateStyles("portfolio")}
+          className={styles.portfolio}
+          onClick={handleClick}
+        >
           PORTFOLIO
         </div>
-        <div id="contact" className={styles.contact} onClick={handleClick}>
+        <div
+          id="contact"
+          style={calculateStyles("contact")}
+          className={styles.contact}
+          onClick={handleClick}
+        >
           CONTACT
         </div>
       </div>
-      <div id="footer" className={styles.footer}>
+      <div className={styles.footer}>
         <a href="https://github.com/yunchris" target="_blank" rel="noreferrer">
           <FaGithub />
         </a>

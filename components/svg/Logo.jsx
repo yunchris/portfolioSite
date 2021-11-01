@@ -1,14 +1,14 @@
-export default function Logo() {
+export default function Logo(outermoonColor) {
   return (
     <svg viewBox="0 0 139.92 147.78">
       <g>
         <path
-          id="innermoon"
+          fill={"var(--color-active"}
           d="M131.46,121.11a74,74,0,0,0,8.46-12.82,56.13,56.13,0,1,1-8-80.6,74.19,74.19,0,0,0-10.81-10.9c-23.52-19.28-59.36-8.87-77.3,13A72.08,72.08,0,0,0,53.87,131.24C76.3,149.62,112.68,144,131.46,121.11Z"
         />
         <path
           id="outermoon"
-          fill="#fff"
+          fill={outermoonColor.outermoonColor}
           d="M27.14,131.46a73.82,73.82,0,0,0,38.57,16.32A79.87,79.87,0,0,1,37.83,24.91,79.5,79.5,0,0,1,73.68,0,74.13,74.13,0,0,0,27.14,131.46Z"
         />
       </g>

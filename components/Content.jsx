@@ -10,14 +10,17 @@ const colors = {
 };
 
 export default function Content(active) {
-  useEffect(() => {
+  function setColor(color) {
+    document.documentElement.style.setProperty("--color-active", color);
     let activeContent = document.getElementById("contentContainer");
-    
     setTimeout(() => {
-      activeContent.style.backgroundColor = colors[active.active];
-      activeContent.classList.add("animate")
+      activeContent.classList.add("animate");
       activeContent.style.opacity = 1;
     }, 100);
+  }
+  
+  useEffect(() => {
+    setColor(colors[active.active]);
   }, [active])
 
   function currentContent() {
