@@ -1,10 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Sidebar from '../components/Sidebar'
 import Content from '../components/Content'
 
 export default function Home() {
   const [active, setActive] = useState("about");
+
+  useEffect(() => {
+    location.hash = '';
+  },[])
 
   return (
     <div id="container">

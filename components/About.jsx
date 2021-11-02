@@ -25,27 +25,45 @@ export default function About() {
         <i className="devicon-visualstudio-plain colored" />
         <i className="devicon-wordpress-plain" />
       </div>
-      <div className={styles.twoColumn}>
-        <div id="aboutChris" className={styles.greeting}>
-          <div className={styles.greetHeader}>
-            Hi. I&apos;m Chris. Welcome to my site.
+      <div className={styles.aboutContent}>
+        <div className={styles.aboutTop}>
+          <div id="aboutChris" className={styles.greeting}>
+            <div className={styles.greetHeader}>
+              Hi. I&apos;m Chris. Welcome to my site.
+            </div>
+            <div className={styles.profile}>
+              <Image
+                src="/profile.jpeg"
+                layout="fill"
+                objectFit="contain"
+                alt="profile"
+              />
+            </div>
+            <div className={styles.rotatingWords}>SOFTWARE ENGINEER</div>
           </div>
-          <div className={styles.profile}>
-            <Image
-              src="/profile.jpeg"
-              width="150px"
-              height="150px"
-              objectFit="contain"
-              alt="profile"
-            />
+          <div className={styles.resume}>
+            <a href="/Christopher_Yun_Resume.pdf" download target="_blank">
+              <FiDownload style={{ paddingTop: "5px" }} />
+              RESUME
+            </a>
           </div>
-          <div className={styles.greetHeader}>I am</div>
         </div>
-        <div className={styles.resume}>
-          <a href="/Christopher_Yun_Resume.pdf" download target="_blank">
-            <FiDownload style={{ paddingTop: "5px" }} />
-            RESUME
-          </a>
+        <div className={styles.aboutBottom}>
+          <div className={styles.aboutCopy}>
+            <p>
+              I began my career by duct-taping bits of code together and starting
+              my first business while still in college. Since then, my goal has
+              remained unchanged:
+            </p>
+            <p>- IMPROVE DAILY AT CREATING SOLUTIONS -</p>
+            <p style={{marginBottom: '0rem'}}>
+              Since 2006, I have honed my programming chops, enjoyed learning
+              new languages & frameworks and have actively sought interesting 
+              projects that could benefit from my experience.  My work history 
+              entails startups, project management, marketing, branding and design.
+              I strive daily to improve my domain of expertise and optimize.
+            </p>
+          </div>
         </div>
       </div>
     </div>
