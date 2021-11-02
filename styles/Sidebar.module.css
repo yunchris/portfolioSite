@@ -15,10 +15,12 @@
   padding: 0rem 2rem 0rem 2rem;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .logo {
   height: 100px;
+  width: 100px;
   display: none;
   -webkit-animation: rotating 3s linear infinite;
   -moz-animation: rotating 3s linear infinite;
