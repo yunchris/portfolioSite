@@ -12,7 +12,8 @@ const colors = {
 };
 
 export default function SideBar(active) {
-  const currentColor = useRef(colors[active.active])
+  const currentColor = useRef(colors[active.active]);
+  const logo = useRef(null);
 
   function setWindowHeight() {
     const container = document.getElementById("container")
@@ -20,13 +21,21 @@ export default function SideBar(active) {
     container.style.height = windowHeight + "px";
   }
 
+  function normalizeLogoRotation() {
+    setTimeout(() => {
+      logo.current.classList.remove(styles.spedUpRotation)
+    }, 1000)
+  }
+
   useEffect(() => {
+    logo.current = document.getElementById("logo")
     setWindowHeight();
     window.addEventListener("resize", setWindowHeight, false);
   }, []);
 
   useEffect(() => {
     currentColor.current = colors[active.active];
+    normalizeLogoRotation();
     let yun = document.getElementById("yun");
     for (let i = 0; i < yun.children.length; i++) {
       yun.children[i].classList.remove(styles.invisible);
@@ -40,9 +49,12 @@ export default function SideBar(active) {
     
     let activeContent = document.getElementById("contentContainer");
     activeContent.style.display = "flex";
-
-    // Hides content so it doesnt show before new component slide in animation
+    
     if (active.active !== e.target.id) {
+      // Speeds up logo rotation
+      logo.current.classList.add(styles.spedUpRotation)
+
+      // Hides content so it doesnt show before new component slide in animation
       activeContent.style.opacity = 0;
       activeContent.classList.remove("animate");
   
@@ -72,7 +84,7 @@ export default function SideBar(active) {
   return (
     <div className={styles.sidebar}>
       <div className={styles.top}>
-        <div className={styles.logo}>
+        <div className={styles.logo} id="logo">
           <Logo outermoonColor={calculateMoonColor()}/>
         </div>
         <div>

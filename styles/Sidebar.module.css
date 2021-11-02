@@ -31,6 +31,14 @@
   filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .3));
 }
 
+.spedUpRotation {
+  -webkit-animation: rotating .3s linear infinite;
+  -moz-animation: rotating .3s linear infinite;
+  -ms-animation: rotating .3s linear infinite;
+  -o-animation: rotating .3s linear infinite;
+  animation: rotating .3s linear infinite;
+}
+
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {
     -webkit-transform: rotateY(0deg);
