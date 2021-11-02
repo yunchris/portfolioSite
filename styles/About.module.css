@@ -1,5 +1,6 @@
 .aboutContainer {
-  overflow: scroll;
+  overflow: auto;
+  justify-content: space-between;
   flex-direction: column-reverse;
   width: 100%;
 }
@@ -18,7 +19,7 @@
 
 .greetHeader {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.25rem;
   padding: .5rem;
   justify-content: center;
 }
@@ -57,7 +58,7 @@
 }
 
 .icons {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: #999999;
   width: 100%;
   justify-content: space-evenly;
@@ -66,7 +67,7 @@
 }
 
 .icons i {
-  padding: 1rem;
+  padding: .25rem;
 }
 
 @media only screen and (min-width: 800px) {
@@ -76,20 +77,36 @@
   }
 
   .icons {
+    font-size: 2rem;
     padding-top: 2rem;
-    max-width: 720px;
+    max-width: 470px;
     align-self: center;
+  }
+
+  .icons i {
+    padding: .5rem;
+  }
+
+  .greetHeader {
+    font-size: 2rem;
   }
 }
 
-@media only screen and (min-width: 1350px) {
+@media only screen and (min-width: 1050px) {
   .aboutContainer {
     flex-direction: row;
   }
 
   .icons {
-    width: 175px;
-    height: 100%;
+    font-size: 2.5rem;
     padding-top: 0rem;
+    width: 190px;
+    height: 100%;
+    max-width: 720px;
   }
+
+  .icons i {
+    padding: 1rem;
+  }
+
 }

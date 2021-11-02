@@ -41,6 +41,7 @@
     transform: rotateY(360deg);
   }
 }
+
 @keyframes rotating {
   from {
     -ms-transform: rotateY(0deg);
@@ -58,6 +59,31 @@
   }
 }
 
+.logoPath {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+}
+
+.y, .u, .n {
+  animation: letter-animation 2.5s linear forwards;
+}
+
+.invisible {
+  display: none;
+}
+
+@keyframes letter-animation {
+  0% {
+      stroke-dashoffset: 1400;
+      fill: var(--color-sidebar);
+  }
+
+  100% {
+      stroke-dashoffset: 0;
+      fill: var(--color-active)
+  }
+}
+
 .navigation {
   height: 40%;
   width: 100%;
@@ -72,7 +98,6 @@
 
 .about, .portfolio, .contact {
   width: 100%;
-  /* justify-content: center; */
   text-align: center;
   transition: ease-in-out .3s;
   padding: 0rem 2rem 0rem 2rem;
@@ -126,7 +151,7 @@
   }
 }
 
-@media only screen and (min-width: 1350px) {
+@media only screen and (min-width: 1050px) {
   .sidebar {
     flex-basis: 20%;
     min-width: 350px;

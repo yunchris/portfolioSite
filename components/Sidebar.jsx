@@ -27,6 +27,10 @@ export default function SideBar(active) {
 
   useEffect(() => {
     currentColor.current = colors[active.active];
+    let yun = document.getElementById("yun");
+    for (let i = 0; i < yun.children.length; i++) {
+      yun.children[i].classList.remove(styles.invisible);
+    }
   }, [active])
   
   
@@ -45,6 +49,11 @@ export default function SideBar(active) {
       // Modifies container bg for slide in animation effect
       let container = document.getElementById("container");
       container.style.backgroundColor = currentColor.current;
+
+      let yun = document.getElementById("yun");
+      for (let i = 0; i < yun.children.length; i++) {
+        yun.children[i].classList.add(styles.invisible)
+      }
     }
   }
 
@@ -69,8 +78,8 @@ export default function SideBar(active) {
         <div>
           <Christopher />
         </div>
-        <div style={{ fill: "var(--color-active)" }}>
-          <Yun />
+        <div>
+          <Yun styles={styles}/>
         </div>
       </div>
       <div id="nav" className={styles.navigation}>
