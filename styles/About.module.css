@@ -83,7 +83,7 @@
   padding: .5rem 0rem;
   margin: 2rem 0rem;
   border: 1px solid white;
-  border-radius: 5px;
+  border-radius: 3px;
   font-size: 1.25rem;
   justify-content: center;
   align-items: center;
@@ -95,7 +95,7 @@
 }
 
 .resume:hover {
-  color: black;
+  color: #212d40;
   background-color: white;
   transform: scale(1.05);
 }
@@ -232,7 +232,6 @@
   .resume {
     width: 160px;
     height: auto;
-    border-radius: 5px;
     font-size: 1.5rem;
   }
 

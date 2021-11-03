@@ -49,7 +49,11 @@ export default function SideBar(active) {
     
     let activeContent = document.getElementById("contentContainer");
     activeContent.style.display = "flex";
-    activeContent.scrollIntoView()
+    activeContent.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
     
     if (active.active !== e.target.id) {
       // Speeds up logo rotation

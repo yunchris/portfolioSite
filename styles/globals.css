@@ -28,6 +28,25 @@ div {
   display: flex;
 }
 
+input, textarea {
+  border: none;
+  font-size: 1.3rem;
+  padding-left: .75rem;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  border-radius: 3px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+  resize: none;
+}
+
+textarea {
+  padding-top: 1rem;
+  width: 100%;
+}
+
+input:focus-visible, textarea:focus-visible {
+  outline: none;
+}
+
 * {
   box-sizing: border-box;
 }
