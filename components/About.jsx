@@ -16,7 +16,21 @@ export default function About() {
     wordsContainer?.append(newWord);
   };
 
+  function setProfileHeight() {
+    const profileContainer = document.getElementById("profile");
+    let profilePicSize = window.innerHeight / 7;
+    if (profileContainer) {
+      profileContainer.style.height = profilePicSize + "px";
+      profileContainer.style.width = profilePicSize + "px";
+    }
+  }
+
   useEffect(() => {
+    // Sets up profile pic container height
+    setProfileHeight();
+    window.addEventListener("resize", setProfileHeight, false);
+
+    // Sets up rotating words on load
     let index = 1;
     const rotationEffect = setInterval(() => {
       rotatingWords(index);
@@ -53,12 +67,12 @@ export default function About() {
             <div className={styles.greetHeader}>
               Hi. I&apos;m Chris. Welcome to my site.
             </div>
-            <div className={styles.profile}>
+            <div id="profile" className={styles.profile}>
               <Image
                 src="/profile.jpeg"
                 layout="fill"
                 objectFit="contain"
-                alt="profile"
+                alt="Christopher Yun"
               />
             </div>
             <div id="rotatingWords" className={styles.rotatingWords}>
