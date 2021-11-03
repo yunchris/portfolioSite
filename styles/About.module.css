@@ -51,7 +51,7 @@
 .aboutCopy {
   font-size: 1.2rem;
   text-align: center;
-  padding: 2rem 0rem;
+  padding: 2rem 1rem;
   padding-bottom: 0rem;
   max-width: 750px;
   flex-direction: column;
