@@ -49,6 +49,7 @@ export default function SideBar(active) {
     
     let activeContent = document.getElementById("contentContainer");
     activeContent.style.display = "flex";
+    activeContent.scrollIntoView()
     
     if (active.active !== e.target.id) {
       // Speeds up logo rotation
@@ -82,7 +83,7 @@ export default function SideBar(active) {
   }
 
   return (
-    <div className={styles.sidebar}>
+    <div id="sidebar" className={styles.sidebar}>
       <div className={styles.top}>
         <div className={styles.logo} id="logo">
           <Logo outermoonColor={calculateMoonColor()}/>
@@ -95,24 +96,21 @@ export default function SideBar(active) {
         </div>
       </div>
       <div id="nav" className={styles.navigation}>
-        <a href="#aboutChris"
-          id="about"
+        <a id="about"
           style={calculateStyles("about")}
           className={styles.about}
           onClick={handleClick}
         >
           ABOUT
         </a> 
-        <a href="#contentContainer"
-          id="portfolio"
+        <a id="portfolio"
           style={calculateStyles("portfolio")}
           className={styles.portfolio}
           onClick={handleClick}
         >
           PORTFOLIO
         </a>
-        <a href="#contentContainer"
-          id="contact"
+        <a id="contact"
           style={calculateStyles("contact")}
           className={styles.contact}
           onClick={handleClick}

@@ -3,7 +3,7 @@ import Image from "next/image"
 import styles from "../styles/About.module.css";
 import { FiDownload } from "react-icons/fi";
 
-const wordsArray = ["SOFTWARE ENGINEER", "ENTREPRENEUR", "TEXAS BORN", "LOUISIANA RAISED", "CAL BEAR EDUCATED", "FOUNDER", "FORMER POKER PLAYER", "APP ACADEMY WRANGLER", "FULL STACK DEVELOPER", "FIGHTING GAME ENTHUSIAST", "LIFE LONG LEARNER"]
+const wordsArray = ["SOFTWARE ENGINEER", "ENTREPRENEUR", "TEXAS BORN", "LOUISIANA RAISED", "CAL BEAR EDUCATED", "FOUNDER", "APP ACADEMY WRANGLER", "FULL STACK DEVELOPER", "FIGHTING GAME ENTHUSIAST", "LIFE LONG LEARNER"]
 export default function About() {
   // Function to add/remove rotating words to DOM
   const rotatingWords = (index) => {

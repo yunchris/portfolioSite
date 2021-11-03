@@ -58,6 +58,10 @@ div {
   display: none;
 }
 
+.scrollTop:hover {
+  cursor: pointer;
+}
+
 @keyframes slide-in {
   0% { -webkit-transform: translateX(-100%);}
   100% { -webkit-transform: translateX(0%);}
@@ -75,5 +79,9 @@ div {
   .animate {
     animation: slide-in 1.2s forwards;
     -webkit-animation: slide-in 1.2s forwards;
+  }
+
+  .scrollTop {
+    display: none;
   }
 }
