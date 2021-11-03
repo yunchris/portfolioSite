@@ -50,6 +50,7 @@ div {
   flex-basis: 100%;
   padding: 1rem;
   background-color: var(--color-active);
+  overflow: auto;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
@@ -60,6 +61,7 @@ div {
 
 .scrollTop {
   font-size: 1.5rem;
+  z-index: 200;
   position: absolute;
 }
 .scrollTop:hover {

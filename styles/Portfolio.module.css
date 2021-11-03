@@ -1,0 +1,28 @@
+.portfolioContainer {
+  width: 100%;
+  overflow: auto;
+  padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+
+.portfolioContainer > div {
+  flex: 100%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+  margin: 1rem;
+  border: 2px solid white;
+  background-color: white;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+  position: relative;
+}
+
+.portfolioContainer > div:hover {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1050px) {
+  .portfolioContainer > div {
+    flex: 45%;
+  }
+}
