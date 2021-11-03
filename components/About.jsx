@@ -69,9 +69,9 @@ export default function About() {
         <div className={styles.aboutBottom}>
           <div className={styles.aboutCopy}>
             <p>
-              I began my career by duct-taping bits of code together and
-              starting my first business while still in an undergerad in 
-              college. Since then, my goal has remained unchanged:
+              I began my career by duct taping bits of code together and
+              starting my first business while still an undergerad at UC Berkeley. 
+              Since then, my goal has remained unchanged:
             </p>
             <p>- IMPROVE DAILY AT CREATING SOLUTIONS -</p>
             <p style={{ marginBottom: "0rem" }}>
