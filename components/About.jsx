@@ -65,12 +65,6 @@ export default function About() {
               <p id={"popEffect"}>SOFTWARE ENGINEER</p>
             </div>
           </div>
-          {/* <div className={styles.resume}>
-            <a href="/Christopher_Yun_Resume.pdf" download target="_blank">
-              <FiDownload style={{ paddingTop: "5px" }} />
-              RESUME
-            </a>
-          </div> */}
         </div>
         <div className={styles.aboutBottom}>
           <div className={styles.aboutCopy}>
