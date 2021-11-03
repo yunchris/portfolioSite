@@ -1,8 +1,30 @@
+import { useEffect } from 'react'
 import Image from "next/image"
 import styles from "../styles/About.module.css";
 import { FiDownload } from "react-icons/fi";
 
+const wordsArray = ["SOFTWARE ENGINEER", "ENTREPRENEUR", "TEXAS BORN", "LOUISIANA RAISED", "CAL BEAR EDUCATED", "FOUNDER", "FORMER POKER PLAYER", "APP ACADEMY WRANGLER", "FULL STACK DEVELOPER", "FIGHTING GAME ENTHUSIAST", "LIFE LONG LEARNER"]
 export default function About() {
+  // Function to add/remove rotating words to DOM
+  const rotatingWords = (index) => {
+    const wordsContainer = document.getElementById("rotatingWords");
+    const rotatingWordsElement = document.getElementById("popEffect");
+    rotatingWordsElement?.remove();
+    const newWord = document.createElement("p");
+    newWord.id = "popEffect";
+    newWord.innerText = wordsArray[index];
+    wordsContainer?.append(newWord);
+  };
+
+  useEffect(() => {
+    let index = 1;
+    const rotationEffect = setInterval(() => {
+      rotatingWords(index);
+      index = (1 + index) % wordsArray.length;
+    }, 2500);
+    return () => clearInterval(rotationEffect);
+  }, []);
+
   return (
     <div className={styles.aboutContainer}>
       <div className={styles.icons}>
@@ -39,30 +61,39 @@ export default function About() {
                 alt="profile"
               />
             </div>
-            <div className={styles.rotatingWords}>SOFTWARE ENGINEER</div>
+            <div id="rotatingWords" className={styles.rotatingWords}>
+              <p id={"popEffect"}>SOFTWARE ENGINEER</p>
+            </div>
           </div>
-          <div className={styles.resume}>
+          {/* <div className={styles.resume}>
             <a href="/Christopher_Yun_Resume.pdf" download target="_blank">
               <FiDownload style={{ paddingTop: "5px" }} />
               RESUME
             </a>
-          </div>
+          </div> */}
         </div>
         <div className={styles.aboutBottom}>
           <div className={styles.aboutCopy}>
             <p>
-              I began my career by duct-taping bits of code together and starting
-              my first business while still in college. Since then, my goal has
-              remained unchanged:
+              I began my career by duct-taping bits of code together and
+              starting my first business while still in an undergerad in 
+              college. Since then, my goal has remained unchanged:
             </p>
             <p>- IMPROVE DAILY AT CREATING SOLUTIONS -</p>
-            <p style={{marginBottom: '0rem'}}>
+            <p style={{ marginBottom: "0rem" }}>
               Since 2006, I have honed my programming chops, enjoyed learning
-              new languages & frameworks and have actively sought interesting 
-              projects that could benefit from my experience.  My work history 
-              entails startups, project management, marketing, branding and design.
-              I strive daily to improve my domain of expertise and optimize.
+              new languages & frameworks and have actively sought interesting
+              projects that could benefit from my experience. My work history
+              entails startups, project management, marketing, branding and
+              design. I strive daily to improve my domain of expertise and
+              optimize.
             </p>
+          </div>
+          <div className={styles.resume}>
+            <a href="/Christopher_Yun_Resume.pdf" target="_blank">
+              <FiDownload style={{ paddingTop: "5px" }} />
+              RESUME
+            </a>
           </div>
         </div>
       </div>

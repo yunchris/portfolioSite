@@ -36,9 +36,16 @@
 }
 
 .aboutTop, .aboutBottom {
-  flex-basis: 50%;
   flex-direction: column;
   align-items: center;
+}
+
+.aboutTop {
+  flex-basis: 30%;
+}
+
+.aboutBottom {
+  flex-basis: 70%;
 }
 
 .aboutCopy {
@@ -107,6 +114,103 @@
   padding: .25rem;
 }
 
+/* Rotating Words styles */
+
+#popEffect {
+  display: inline;
+  opacity: 0;
+  overflow: hidden;
+  animation: pop 2.5s linear infinite 0s;
+  -ms-animation: pop 2.5s linear infinite 0s;
+  -webkit-animation: pop 2.5s linear infinite 0s;
+}
+
+/*Pop Effect Animation*/
+@-moz-keyframes pop {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    -moz-transform: rotate(0deg) scale(0.1) skew(0deg) translate(0px);
+  }
+  10% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  30% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pop {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    -moz-transform: rotate(0deg) scale(0.1) skew(0deg) translate(0px);
+  }
+  10% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  30% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes pop {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    -moz-transform: rotate(0deg) scale(0.1) skew(0deg) translate(0px);
+  }
+  10% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  25% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  30% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
 @media only screen and (min-width: 600px) {
   .greetHeader {
     font-size: 1.4rem;
@@ -116,6 +220,8 @@
     font-size: 1.4rem;
     padding: 1rem;
   }
+
+  
 }
 
 @media only screen and (min-width: 800px) {
@@ -162,6 +268,10 @@
   .resume svg {
     margin-right: 10px;
   }
+
+  #popEffect {
+    margin: 1rem 0rem;
+  }
 }
 
 @media only screen and (min-width: 1050px) {
@@ -182,7 +292,7 @@
   }
 
   .rotatingWords {
-    font-size: 4rem;
-    line-height: 4rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
   }
 }
