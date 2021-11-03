@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import About from "./About"
 import Portfolio from "./Portfolio"
 import Contact from "./Contact"
-import { BsArrowUpCircle } from "react-icons/bs";
+import { ImMoveUp } from "react-icons/im";
 
 const colors = {
   about: "#212d40",
@@ -45,7 +45,7 @@ export default function Content(active) {
   return (
     <div id="contentContainer" className="contentContainer">
       <div className="scrollTop" onClick={scrollToTop}>
-        <BsArrowUpCircle />
+        <ImMoveUp height="30px"/>
       </div>
       {currentContent()}
     </div>
