@@ -12,7 +12,7 @@ export default function Contact() {
       <div className={styles.contactHeader}>Send me a message</div>
       {!state.succeeded && (
         <p className={styles.contactSubheader}>
-          I would love to hear from you. Let&apos;s work together!
+          I would love to hear from you.
         </p>
       )}
       {state.succeeded && (
