@@ -70,15 +70,16 @@ export default function About() {
           <div className={styles.aboutCopy}>
             <p>
               I began my career by duct taping bits of code together and
-              starting my first business while still an undergerad at UC Berkeley. 
-              Since then, my goal has remained unchanged:
+              starting my first business while still an undergerad at UC
+              Berkeley. Since then, my goal has remained unchanged: IMPROVE
+              DAILY AT CREATING SOLUTIONS
             </p>
-            <p>- IMPROVE DAILY AT CREATING SOLUTIONS -</p>
+            {/* <p>- IMPROVE DAILY AT CREATING SOLUTIONS -</p> */}
             <p style={{ marginBottom: "0rem" }}>
               Since 2006, I have honed my programming chops, enjoyed learning
               new languages & frameworks and have actively sought interesting
               projects that could benefit from my experience. My work history
-              entails startups, project management, marketing, branding and
+              entails coding, startups, project management, marketing, branding and
               design. I strive daily to improve my domain of expertise and
               optimize.
             </p>

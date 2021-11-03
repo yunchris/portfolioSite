@@ -1,12 +1,8 @@
-// import { useEffect }
 import { useForm, ValidationError } from "@formspree/react";
 import styles from "../styles/Contact.module.css"
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("xleayldg");
-  // if (state.succeeded) {
-  //   return <p>Thank you for the message!  I will get back to you as soon as possible</p>;
-  // }
   return (
     <div className={styles.contactContainer}>
       <div className={styles.contactHeader}>Send me a message</div>
