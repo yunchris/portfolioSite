@@ -1,28 +1,69 @@
 .portfolioContainer {
   width: 100%;
-  overflow: auto;
-  padding: 1rem;
+  height: 100%;
+  padding-top: 4rem;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
-  position: relative;
+
 }
 
-.portfolioContainer > div {
-  flex: 100%; /* or - flex: 0 50% - or - flex-basis: 50% - */
-  margin: 1rem;
+.siteDisplay {
+  height: 100%;
+  flex-basis: 70%;
+  align-items: flex-start;
+  max-width: 800px;
+  animation: slide-in 1.2s forwards;
+}
+
+.sitePic {
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+}
+
+.siteIndex {
+  height: 100%;
+  flex-basis: 30%;
+  flex-direction: column;
+  overflow: auto
+}
+
+.siteIndex > div {
+  flex: 100%;
   border: 2px solid white;
   background-color: white;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
   position: relative;
 }
 
-.portfolioContainer > div:hover {
+.siteIndex > div:hover {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 1275px) {
-  .portfolioContainer > div {
-    flex: 45%;
+#overlay {
+  position: absolute;
+  display: flex; 
+  width: 100%; 
+  height: 100%; 
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 200;
+}
+
+@keyframes slide-in {
+  0% { -webkit-transform: translateY(-100%);}
+  100% { -webkit-transform: translateY(0%);}
+}
+
+@media only screen and (min-width: 800px) {
+  .portfolioContainer {
+    flex-direction: row;
+    padding-top: 0rem
+  }
+
+  .siteDisplay {
+    padding-right: 2rem;
   }
 }

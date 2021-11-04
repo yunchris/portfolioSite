@@ -10,7 +10,7 @@ const colors = {
   contact: "#0081a7",
 };
 
-export default function Content(active) {
+export default function Content({active}) {
   function scrollToTop() {
     let sidebarTop = document.getElementById("sidebar");
     sidebarTop.scrollIntoView();
@@ -26,11 +26,11 @@ export default function Content(active) {
   }
   
   useEffect(() => {
-    setColor(colors[active.active]);
+    setColor(colors[active]);
   }, [active])
 
   function currentContent() {
-    switch (active.active) {
+    switch (active) {
       case "about":
         return <About />
       case "portfolio":

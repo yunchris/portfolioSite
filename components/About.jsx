@@ -13,7 +13,7 @@ export default function About() {
     const newWord = document.createElement("p");
     newWord.id = "popEffect";
     newWord.innerText = wordsArray[index];
-    wordsContainer?.append(newWord);
+    wordsContainer.append(newWord);
   };
 
   function setProfileHeight() {

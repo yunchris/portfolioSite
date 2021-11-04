@@ -11,42 +11,41 @@ const colors = {
   contact: "#0081a7",
 };
 
-export default function SideBar(active) {
-  const currentColor = useRef(colors[active.active]);
+export default function SideBar({ active, setActive }) {
+  const currentColor = useRef(colors[active]);
   const logo = useRef(null);
 
   function setWindowHeight() {
-    const container = document.getElementById("container")
+    const container = document.getElementById("container");
     let windowHeight = window.innerHeight;
     container.style.height = windowHeight + "px";
   }
 
   function normalizeLogoRotation() {
     setTimeout(() => {
-      logo.current.classList.remove(styles.spedUpRotation)
-    }, 1000)
+      logo.current.classList.remove(styles.spedUpRotation);
+    }, 1000);
   }
 
   useEffect(() => {
-    logo.current = document.getElementById("logo")
+    logo.current = document.getElementById("logo");
     setWindowHeight();
     window.addEventListener("resize", setWindowHeight, false);
   }, []);
 
   useEffect(() => {
-    currentColor.current = colors[active.active];
+    currentColor.current = colors[active];
     normalizeLogoRotation();
     let yun = document.getElementById("yun");
     for (let i = 0; i < yun.children.length; i++) {
       yun.children[i].classList.remove(styles.invisible);
     }
-  }, [active])
-  
-  
+  }, [active]);
+
   const handleClick = (e) => {
     // Sets new active component state
-    active.setActive(e.target.id)
-    
+    setActive(e.target.id);
+
     let activeContent = document.getElementById("contentContainer");
     activeContent.style.display = "flex";
     activeContent.scrollIntoView({
@@ -54,67 +53,68 @@ export default function SideBar(active) {
       block: "start",
       inline: "nearest",
     });
-    
-    if (active.active !== e.target.id) {
+
+    if (active !== e.target.id) {
       // Speeds up logo rotation
-      logo.current.classList.add(styles.spedUpRotation)
+      logo.current.classList.add(styles.spedUpRotation);
 
       // Hides content so it doesnt show before new component slide in animation
       activeContent.style.opacity = 0;
       activeContent.classList.remove("animate");
-  
+
       // Modifies container bg for slide in animation effect
       let container = document.getElementById("container");
       container.style.backgroundColor = currentColor.current;
 
       let yun = document.getElementById("yun");
       for (let i = 0; i < yun.children.length; i++) {
-        yun.children[i].classList.add(styles.invisible)
+        yun.children[i].classList.add(styles.invisible);
       }
     }
-  }
+  };
 
   const calculateStyles = (componentName) => {
-    return (
-      active.active === componentName 
-      ? {color: "white", backgroundColor: "var(--color-active)"}
-      : {color: "black", backgroundColor: "transparent"}
-    )
-  }
+    return active === componentName
+      ? { color: "white", backgroundColor: "var(--color-active)" }
+      : { color: "black", backgroundColor: "transparent" };
+  };
 
   const calculateMoonColor = () => {
-    return active.active === "about" ? "#ffffff" : "#212d40";
-  }
+    return active === "about" ? "#ffffff" : "#212d40";
+  };
 
   return (
     <div id="sidebar" className={styles.sidebar}>
       <div className={styles.top}>
         <div className={styles.logo} id="logo">
-          <Logo outermoonColor={calculateMoonColor()}/>
+          <Logo outermoonColor={calculateMoonColor()} />
         </div>
         <div>
           <Christopher />
         </div>
         <div>
-          <Yun styles={styles}/>
+          <Yun styles={styles} />
         </div>
       </div>
       <div id="nav" className={styles.navigation}>
-        <a id="about"
+        <a
+          id="about"
           style={calculateStyles("about")}
           className={styles.about}
           onClick={handleClick}
         >
           ABOUT
-        </a> 
-        <a id="portfolio"
+        </a>
+        <a
+          id="portfolio"
           style={calculateStyles("portfolio")}
           className={styles.portfolio}
           onClick={handleClick}
         >
           PORTFOLIO
         </a>
-        <a id="contact"
+        <a
+          id="contact"
           style={calculateStyles("contact")}
           className={styles.contact}
           onClick={handleClick}

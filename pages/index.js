@@ -22,7 +22,7 @@ export default function Home() {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
       </Head>
       <Sidebar active={active} setActive={setActive} />
-      <Content active={active} setActive={setActive} />
+      <Content active={active} />
     </div>
   );
 }
