@@ -33,7 +33,7 @@
 }
 
 #siteTitle {
-  font-size: 3rem;
+  font-size: 2rem;
   justify-content: center;
   font-family: "Shadows Into Light", Helvetica, sans-serif;
   text-transform: uppercase;
@@ -89,6 +89,7 @@
   }
 
   #siteTitle {
+    font-size: 3rem;
     padding: 2rem 0rem;
   }
 

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import About from "./About"
 import Portfolio from "./Portfolio"
 import Contact from "./Contact"
-import { ImMoveUp } from "react-icons/im";
+import { BiArrowBack } from "react-icons/bi";
 
 const colors = {
   about: "#212d40",
@@ -12,13 +12,19 @@ const colors = {
 
 export default function Content({active}) {
   function scrollToTop() {
-    let sidebarTop = document.getElementById("sidebar");
-    sidebarTop.scrollIntoView();
+    const sidebar = document.getElementById("sidebar");
+    const activeContent = document.getElementById("contentContainer");
+    sidebar.style.display="flex"
+    activeContent.style.display="none"
+    sidebar.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   }
 
   function setColor(color) {
     document.documentElement.style.setProperty("--color-active", color);
-    let activeContent = document.getElementById("contentContainer");
+    const activeContent = document.getElementById("contentContainer");
     setTimeout(() => {
       activeContent.classList.add("animate");
       activeContent.style.opacity = 1;
@@ -45,7 +51,7 @@ export default function Content({active}) {
   return (
     <div id="contentContainer" className="contentContainer">
       <div id="scrollTop" className="scrollTop" onClick={scrollToTop}>
-        <ImMoveUp height="30px"/>
+        <BiArrowBack height="30px" />
       </div>
       {currentContent()}
     </div>

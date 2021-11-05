@@ -15,10 +15,15 @@ export default function SideBar({ active, setActive }) {
   const currentColor = useRef(colors[active]);
   const logo = useRef(null);
 
-  function setWindowHeight() {
+  function setResponsiveDisplay() {
+    const activeContent = document.getElementById("contentContainer");
+    const sidebar = document.getElementById("sidebar");
     const container = document.getElementById("container");
-    let windowHeight = window.innerHeight;
-    container.style.height = windowHeight + "px";
+    container.style.height = window.innerHeight + "px";
+    if (window.innerWidth > 800) {
+      activeContent.style.display = "flex"
+      sidebar.style.display = "flex"
+    }
   }
 
   function normalizeLogoRotation() {
@@ -29,14 +34,14 @@ export default function SideBar({ active, setActive }) {
 
   useEffect(() => {
     logo.current = document.getElementById("logo");
-    setWindowHeight();
-    window.addEventListener("resize", setWindowHeight, false);
+    setResponsiveDisplay();
+    window.addEventListener("resize", setResponsiveDisplay, false);
   }, []);
 
   useEffect(() => {
     currentColor.current = colors[active];
     normalizeLogoRotation();
-    let yun = document.getElementById("yun");
+    const yun = document.getElementById("yun");
     for (let i = 0; i < yun.children.length; i++) {
       yun.children[i].classList.remove(styles.invisible);
     }
@@ -46,13 +51,12 @@ export default function SideBar({ active, setActive }) {
     // Sets new active component state
     setActive(e.target.id);
 
-    let activeContent = document.getElementById("contentContainer");
-    activeContent.style.display = "flex";
-    activeContent.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
+    const activeContent = document.getElementById("contentContainer");
+    const sidebar = document.getElementById("sidebar");
+    if (window.innerWidth < 800) {
+      sidebar.style.display = "none"
+      activeContent.style.display = "flex"
+    }
 
     if (active !== e.target.id) {
       // Speeds up logo rotation
@@ -63,10 +67,10 @@ export default function SideBar({ active, setActive }) {
       activeContent.classList.remove("animate");
 
       // Modifies container bg for slide in animation effect
-      let container = document.getElementById("container");
+      const container = document.getElementById("container");
       container.style.backgroundColor = currentColor.current;
 
-      let yun = document.getElementById("yun");
+      const yun = document.getElementById("yun");
       for (let i = 0; i < yun.children.length; i++) {
         yun.children[i].classList.add(styles.invisible);
       }

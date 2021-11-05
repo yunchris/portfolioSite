@@ -63,6 +63,7 @@ input:focus-visible, textarea:focus-visible {
 }
 
 .contentContainer {
+  display: none;
   opacity: 0;
   width: 100%;
   min-height: 100%;
@@ -98,6 +99,7 @@ input:focus-visible, textarea:focus-visible {
   }
 
   .contentContainer {
+    display: flex;
     padding: 2rem;
   }
 
