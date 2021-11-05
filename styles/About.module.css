@@ -3,7 +3,7 @@
   height: 100%; 
   overflow: auto;
   justify-content: space-between;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .aboutContent {
@@ -182,6 +182,10 @@
 }
 
 @media only screen and (min-width: 600px) {
+  .aboutContainer {
+    flex-direction: column-reverse;
+  }
+
   .greetHeader {
     font-size: 1.4rem;
   }
@@ -189,8 +193,6 @@
   .aboutCopy {
     padding: 1rem;
   }
-
-  
 }
 
 @media only screen and (min-width: 800px) {
