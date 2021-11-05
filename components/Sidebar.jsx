@@ -7,8 +7,8 @@ import { FaGithub, FaLinkedin, FaFacebookSquare } from "react-icons/fa";
 
 const colors = {
   about: "#212d40",
-  portfolio: "#d81159",
-  contact: "#0081a7",
+  contact: "#d81159",
+  portfolio: "#0081a7",
 };
 
 export default function SideBar({ active, setActive }) {

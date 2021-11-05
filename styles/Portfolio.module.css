@@ -15,15 +15,13 @@
 }
 
 .animate {
-  animation: slide-in 1.2s forwards;
+  animation: slide-in .4s forwards;
 }
 
 #siteDisplay {
   height: 100%;
   flex-direction: column;
   color: white;
-  background-color: #212d40;
-  background-color: transparent;
 }
 
 #sitePicContainer {
