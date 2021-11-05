@@ -44,7 +44,7 @@ export default function Content({active}) {
 
   return (
     <div id="contentContainer" className="contentContainer">
-      <div className="scrollTop" onClick={scrollToTop}>
+      <div id="scrollTop" className="scrollTop" onClick={scrollToTop}>
         <ImMoveUp height="30px"/>
       </div>
       {currentContent()}

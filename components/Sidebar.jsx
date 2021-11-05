@@ -76,7 +76,7 @@ export default function SideBar({ active, setActive }) {
   const calculateStyles = (componentName) => {
     return active === componentName
       ? { color: "white", backgroundColor: "var(--color-active)" }
-      : { color: "black", backgroundColor: "transparent" };
+      : { color: "#212d40", backgroundColor: "transparent" };
   };
 
   const calculateMoonColor = () => {
