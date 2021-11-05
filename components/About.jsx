@@ -73,6 +73,7 @@ export default function About() {
                 layout="fill"
                 objectFit="contain"
                 alt="Christopher Yun"
+                priority
               />
             </div>
             <div id="rotatingWords" className={styles.rotatingWords}>

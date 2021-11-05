@@ -23,12 +23,29 @@ export default function Contact() {
           value="Email from christopheryun.com"
         />
         <div className={styles.contactInfo}>
-          <input id="name" type="text" name="name" placeholder="Name" />
-          <input id="email" type="email" name="email" placeholder="Email" />
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
         </div>
         <div className={styles.contactMessage}>
-          <textarea id="message" name="message" placeholder="Message" />
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Message"
+            required
+          />
           <ValidationError
             prefix="Message"
             field="message"

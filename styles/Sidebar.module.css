@@ -161,7 +161,7 @@
   }
 }
 
-@media only screen and (min-width: 1275px) {
+@media only screen and (min-width: 1285px) {
   .sidebar {
     flex-basis: 20%;
     min-width: 350px;
