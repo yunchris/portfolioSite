@@ -17,14 +17,14 @@ const siteDetails = {
     title: "OnePager",
     url: "https://onepager.vc/",
     techStack:
-      "Next.js | Node.js | JavaScript | TypeScript | HTML5 | CSS3 | MySQL | Sanity.io | Chakra UI | Material UI | AWS serverless infrastructure | Stripe API | Google Analytics API | Google Maps API",
+      "Next.js | Node.js | JavaScript | TypeScript | HTML5 | CSS3 | MySQL | AWS Cloud | Sanity.io | Chakra UI | Material UI | Stripe API | Google Analytics API | Google Maps API",
   },
   otmiri: {
     sitePic: otmiri,
     title: "OT Miri",
     url: "https://www.otmiri.com",
     techStack:
-      "React.js | Redux | JavaScript | HTML5 | CSS3 | MySQL | WordPress | DonorBox API",
+      "React.js | Redux | JavaScript | HTML5 | CSS3 | MySQL | WordPress | DonorBox API | Design | Branding | Content",
   },
   mindscape: {
     sitePic: mindscape,
@@ -45,25 +45,25 @@ const siteDetails = {
     title: "William Atherton",
     url: "https://williamatherton.com/",
     techStack:
-      "WordPress | JavaScript | HTML5 | CSS3 | Elementor | GeneratePress | Advanced Custom Fields",
+      "WordPress | JavaScript | HTML5 | CSS3 | Elementor | GeneratePress | Advanced Custom Fields | Sanity.io",
   },
   bestfresh: {
     sitePic: bestfresh,
     title: "Best Fresh Kratom",
     techStack:
-      "WordPress | JavaScript | HTML5 | CSS3 | Elementor | GeneratePress | Advanced Custom Fields",
+      "WordPress | JavaScript | HTML5 | CSS3 | Elementor | GeneratePress | Advanced Custom Fields | Design | Branding",
   },
   vapenvibes: {
     sitePic: vapenvibes,
     title: "Island Vape-N-Vibes",
     techStack:
-      "WordPress | JavaScript | HTML5 | CSS3 | Elementor | GeneratePress | Advanced Custom Fields",
+      "WordPress | JavaScript | HTML5 | CSS3 | Elementor | GeneratePress | Advanced Custom Fields | Design | Branding",
   },
   nudesushi: {
     sitePic: nudesushi,
     title: "Nude Sushi",
     techStack:
-      "WordPress | JavaScript | HTML5 | CSS3 | WooCommerce | Stripe API | Advanced Custom Fields",
+      "WordPress | JavaScript | HTML5 | CSS3 | WooCommerce | Stripe API | Advanced Custom Fields | Design | Branding",
   },
 };
 
