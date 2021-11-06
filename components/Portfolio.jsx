@@ -23,33 +23,48 @@ const siteDetails = {
     sitePic: otmiri,
     title: "OT Miri",
     url: "https://www.otmiri.com",
-    techStack: "",
+    techStack:
+      "React.js | Redux | JavaScript | HTML5 | CSS3 | MySQL | WordPress | DonorBox API",
   },
   mindscape: {
     sitePic: mindscape,
     title: "Mindscape",
     url: "https://mind--scape.herokuapp.com/",
-    techStack: "",
+    techStack:
+      "React.js | Redux | Ruby on Rails | JavaScript | HTML5 | CSS3 | PostgreSQL | Google Maps API",
   },
   spaceball: {
     sitePic: spaceball,
     title: "Space Ball",
     url: "https://space-ball.herokuapp.com/",
-    techStack: "",
+    techStack:
+      "MongoDB | Express.js | React.js | Redux | Node.js | JavaScript | HTML5 | CSS3 | Socket.io | Matter.js | Canvas",
   },
   atherton: {
     sitePic: atherton,
     title: "William Atherton",
     url: "https://williamatherton.com/",
-    techStack: "",
+    techStack:
+      "WordPress | JavaScript | HTML5 | CSS3 | Elementor | GeneratePress | Advanced Custom Fields",
   },
-  bestfresh: { sitePic: bestfresh, title: "Best Fresh Kratom", techStack: "" },
+  bestfresh: {
+    sitePic: bestfresh,
+    title: "Best Fresh Kratom",
+    techStack:
+      "WordPress | JavaScript | HTML5 | CSS3 | Elementor | GeneratePress | Advanced Custom Fields",
+  },
   vapenvibes: {
     sitePic: vapenvibes,
     title: "Island Vape-N-Vibes",
-    techStack: "",
+    techStack:
+      "WordPress | JavaScript | HTML5 | CSS3 | Elementor | GeneratePress | Advanced Custom Fields",
   },
-  nudesushi: { sitePic: nudesushi, title: "Nude Sushi", techStack: "" },
+  nudesushi: {
+    sitePic: nudesushi,
+    title: "Nude Sushi",
+    techStack:
+      "WordPress | JavaScript | HTML5 | CSS3 | WooCommerce | Stripe API | Advanced Custom Fields",
+  },
 };
 
 export default function Portfolio() {
