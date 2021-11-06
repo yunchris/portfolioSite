@@ -12,14 +12,44 @@ import spaceball from "../public/sitePics/spaceball.jpg";
 import vapenvibes from "../public/sitePics/vapenvibes.jpg";
 
 const siteDetails = {
-  onePager: { sitePic: onePager, title: "OnePager" },
-  otmiri: { sitePic: otmiri, title: "OT Miri" },
-  mindscape: { sitePic: mindscape, title: "Mindscape" },
-  spaceball: { sitePic: spaceball, title: "Space Ball" },
-  atherton: { sitePic: atherton, title: "William Atherton" },
-  bestfresh: { sitePic: bestfresh, title: "Best Fresh Kratom" },
-  vapenvibes: { sitePic: vapenvibes, title: "Island Vape-N-Vibes" },
-  nudesushi: { sitePic: nudesushi, title: "Nude Sushi" },
+  onePager: {
+    sitePic: onePager,
+    title: "OnePager",
+    url: "https://onepager.vc/",
+    techStack:
+      "Next.js | Node.js | JavaScript | TypeScript | HTML5 | CSS3 | MySQL | Sanity.io | Chakra UI | Material UI | AWS serverless infrastructure | Stripe API | Google Analytics API | Google Maps API",
+  },
+  otmiri: {
+    sitePic: otmiri,
+    title: "OT Miri",
+    url: "https://www.otmiri.com",
+    techStack: "",
+  },
+  mindscape: {
+    sitePic: mindscape,
+    title: "Mindscape",
+    url: "https://mind--scape.herokuapp.com/",
+    techStack: "",
+  },
+  spaceball: {
+    sitePic: spaceball,
+    title: "Space Ball",
+    url: "https://space-ball.herokuapp.com/",
+    techStack: "",
+  },
+  atherton: {
+    sitePic: atherton,
+    title: "William Atherton",
+    url: "https://williamatherton.com/",
+    techStack: "",
+  },
+  bestfresh: { sitePic: bestfresh, title: "Best Fresh Kratom", techStack: "" },
+  vapenvibes: {
+    sitePic: vapenvibes,
+    title: "Island Vape-N-Vibes",
+    techStack: "",
+  },
+  nudesushi: { sitePic: nudesushi, title: "Nude Sushi", techStack: "" },
 };
 
 export default function Portfolio() {
@@ -60,7 +90,21 @@ export default function Portfolio() {
               objectFit="contain"
             />
           </div>
-          <div id={styles.siteTitle}>{`${siteDetails[selectedSite]?.title}`}</div>
+          <div
+            id={styles.siteTitle}
+          >{`${siteDetails[selectedSite]?.title}`}</div>
+          <div
+            id={styles.techStack}
+          >{`${siteDetails[selectedSite]?.techStack}`}</div>
+          {siteDetails[selectedSite]?.url && (
+            <a
+              href={siteDetails[selectedSite]?.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div id={styles.siteButton}>LIVE SITE</div>
+            </a>
+          )}
         </div>
       </div>
       <div id={styles.siteIndex}>
